@@ -1,7 +1,7 @@
 {
-    "name": "code-community/behat-web-api-extension",
+    "name": "linio/behat-web-api-extension",
     "type": "behat-extension",
-    "description": "Fork of linio/behat-web-api-extension with a few changes for code-community needs",
+    "description": "Fork of behat/web-api-extension with a few changes for Linio needs",
     "keywords": ["behat", "api", "test"],
     "license": "BSD-3-Clause",
     "authors": [
@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": ">=5.4",
-        "behat/behat": "v3.1.0rc1",
+        "behat/behat": "~3.0",
         "guzzlehttp/guzzle": "~6",
         "phpunit/phpunit": ">=4.0"
     },

@@ -14,8 +14,9 @@ use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
-use PHPUnit_Framework_Assert as Assertions;
+use PHPUnit\Framework\Assert as Assertions;
 use GuzzleHttp\Psr7\Request;
+use InvalidArgumentException;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -164,7 +165,7 @@ class WebApiContext implements ApiClientAwareContext
         parse_str(implode('&', explode("\n", $body)), $fields);
 
         foreach ($fields as $key => $value) {
-            if(is_array($value)) {
+            if (is_array($value)) {
                 foreach ($value as $formKey => $formValue) {
                     $requestFields[] = sprintf('%s%s=%s', urlencode($key), urlencode('[' . $formKey . ']'), urlencode($formValue));
                 }
@@ -241,7 +242,7 @@ class WebApiContext implements ApiClientAwareContext
 
         if (null === $expected) {
             throw new \RuntimeException(
-              "Can not convert expected to json:\n".$this->replacePlaceHolder($jsonString->getRaw())
+                "Can not convert expected to json:\n" . $this->replacePlaceHolder($jsonString->getRaw())
             );
         }
 
@@ -270,7 +271,11 @@ class WebApiContext implements ApiClientAwareContext
 
         if (preg_match('/^\%.+\%$/', $expected, $result)) {
             $pattern = sprintf('/%s/', trim($result[0], '%'));
-            Assertions::assertRegExp($pattern, $actual);
+
+            if (!empty($actual)) {
+                Assertions::assertRegExp($pattern, $actual);
+            }
+
 
             return;
         }

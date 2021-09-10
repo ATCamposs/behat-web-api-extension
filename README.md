@@ -1,10 +1,9 @@
 # WebApiExtension
 
-[![Latest Stable Version](https://poser.pugx.org/code-community/behat-web-api-extension/v/stable.svg)](https://packagist.org/packages/code-community/behat-web-api-extension) 
-[![Total Downloads](https://poser.pugx.org/code-community/behat-web-api-extension/downloads)](https://packagist.org/packages/code-community/behat-web-api-extension) 
-[![Latest Unstable Version](https://poser.pugx.org/code-community/behat-web-api-extension/v/unstable)](https://packagist.org/packages/code-community/behat-web-api-extension) 
-[![License](https://poser.pugx.org/code-community/behat-web-api-extension/license.svg)](https://packagist.org/packages/code-community/behat-web-api-extension) 
-[![Build Status](https://secure.travis-ci.org/code-community/behat-web-api-extension.png)](http://travis-ci.org/code-community/behat-web-api-extension) 
+[![Latest Stable Version](https://poser.pugx.org/linio/behat-web-api-extension/v/stable.svg)](https://packagist.org/packages/linio/behat-web-api-extension) 
+[![License](https://poser.pugx.org/linio/behat-web-api-extension/license.svg)](https://packagist.org/packages/linio/behat-web-api-extension) 
+[![Build Status](https://secure.travis-ci.org/LinioIT/behat-web-api-extension.png)](http://travis-ci.org/LinioIT/behat-web-api-extension) 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/LinioIT/behat-web-api-extension/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/LinioIT/behat-web-api-extension/?branch=master)
 
 Provides testing for JSON APIs with Behat 3
 
